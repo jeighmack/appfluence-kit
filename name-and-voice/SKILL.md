@@ -29,7 +29,14 @@ The clone already exists — the coach recorded the **2-minute scripted read** (
 ### 3. Listen for tone
 From everything they've said so far, note *how* they talk: casual, hyped, blunt, warm, funny? That read feeds `coach-interview` / SOUL.md next.
 
-### 4. Hand off
+### 4. Give it a face (optional, delightful)
+A named twin is real. A named twin with a face is *theirs*. When the owner wants one (in the workshop this happens over lunch, not now):
+
+- Ask them to send a clear selfie.
+- **If image generation is available** to you, generate the avatar yourself from this prompt, tuned to their brand: *"Turn this photo into the digital twin version of me: same face, restyled as a sleek, confident AI avatar. A subtle futuristic edge, clean lighting, a faint glow in my brand colour, sharp and premium, not cartoonish. Head and shoulders, looking at camera, made for a profile picture."* Send it back and let them set it as your picture.
+- **If you can't generate images**, hand them that exact prompt to run in their own image tool, then have them set the result as your Telegram picture. Never block on this, and never spin up a paid image service without asking. The owner-run path is the default.
+
+### 5. Hand off
 Confirm: "Done — I've got a name, and I sound like you. Next I want to learn who you actually are, so I talk like you, not like a robot assistant. Ready?"
 
 Then proceed to the `coach-interview` skill.
