@@ -24,7 +24,7 @@ The bill is almost never "the model is too expensive." It's four compounding dri
 - **Default to the mid-tier model** for the 90% that is conversation, capture, routing, summarising, drafting. On these tasks it is **not meaningfully dumber** than the flagship — same answer, ~5× cheaper.
 - **Escalate to the flagship only** for genuine deep reasoning: strategy, complex multi-constraint decisions, hard problems. Make this an explicit opt-in (a command, a keyword), then drop back.
 - Never run the flagship as the always-on default. That single setting is the most common cause of a catastrophic bill.
-- Config: `model.default` = mid-tier; flagship reachable via `/model <flagship>` per session.
+- Config: `model.default` = mid-tier (e.g. `anthropic/claude-sonnet-4.6` — strong agentic performance at a fraction of flagship cost); flagship reachable via `/model <flagship>` per session.
 
 ### Pillar 2 — Bounded sessions (kill the O(N²) blow-up)
 - The twin **checkpoints to memory and starts fresh** rather than letting one conversation grow to dozens of messages. Durable facts go to memory; the bloated transcript gets dropped.

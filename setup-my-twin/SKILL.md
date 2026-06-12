@@ -32,9 +32,9 @@ By the time the coach says "set up my twin," the machine setup is done (the work
 
 Confirm the environment is ready. If any check fails, this is a **facilitator fix**, not something to surface to the coach — flag it quietly and pause the flow.
 
-- **Brain on Portal:** logged in, and `echo $ANTHROPIC_API_KEY` is empty. No metered keys anywhere.
+- **Brain on Portal, as PROVIDER:** `hermes portal info` shows logged in AND "using Nous as inference provider". Signing into the app is authentication, not routing; the provider setting is the part that matters. `echo $ANTHROPIC_API_KEY` is empty; no metered keys anywhere. If anything is off, `hermes portal` in Terminal fixes auth, provider, and gateway in one command.
 - **Voice ready:** ElevenLabs key present, the coach's cloned voice selected, model set to **Multilingual v2**. A **fallback generic voice is pre-set** so a rough clone never stalls the flow.
-- **Telegram connected** (or note it for the tech check).
+- **Telegram connected and the messaging gateway running** (bottom status bar → Restart messaging if it sits quiet; it does not auto-start).
 - **Home is clean:** `~/` is writable; no half-built twin folder from a previous run.
 
 When all pass, begin.
