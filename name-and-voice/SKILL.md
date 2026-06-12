@@ -1,6 +1,6 @@
 ---
 name: name-and-voice
-description: Warm-up skill that names the coach's digital twin and switches on their cloned voice. Run this FIRST when setting up a new twin — triggered by "set up my twin", "name my twin", or "start my twin setup". The voice itself was recorded earlier (the 2-minute scripted read — see voice-script.md) and cloned at ElevenLabs; this skill names the twin, confirms the clone is wired in, and lands the voice reveal.
+description: Warm-up skill that names the coach's digital twin and gives it the coach's cloned voice. Run this FIRST when setting up a new twin — triggered by "set up my twin", "name my twin", or "start my twin setup". The coach makes an Instant Voice Clone at ElevenLabs (30 seconds of natural speech, no script) and hands the twin an API key in chat; the twin then wires up its own speech and replies in the coach's voice.
 ---
 
 # name-and-voice — Name your twin. Hear yourself talk back.
@@ -19,12 +19,12 @@ Ask: **"First things first — what are you going to call me?"**
 - Create the home folder `~/[TwinName]/` and the subfolders `Inbox/`, `Clients/`, `Content/` if they don't exist.
 - (In the room: this is when they write the twin's name on the back of their seat card. Let that beat breathe.)
 
-### 2. Switch on the voice (the reveal)
-The clone already exists — the coach recorded the **2-minute scripted read** (`voice-script.md`) and cloned it at ElevenLabs during machine setup. Now:
+### 2. Give it the voice (the reveal)
+The coach makes an **Instant Voice Clone** at ElevenLabs — **30 seconds of natural speech, no script** (framed like answering a podcast host: "what does your business do, and what made you start it"). They name the voice their own name, create an API key with the speech endpoints, and **paste the key into the chat**, telling you to use it. When that key lands:
 
-- Confirm the ElevenLabs key is in the app, **their** cloned voice is selected, and the model is **Eleven Multilingual v2** — never English v2, which Americanises Australian accents and flattens cadence.
-- Then land the reveal: say the next line **in their cloned voice** and call it out — **"Hear that? That's you. That's me now."** Let it sit. This is the single biggest holy-shit moment of the morning; don't talk over it.
-- **If the clone isn't ready or sounds rough:** switch to the **pre-set fallback voice** silently, keep the flow moving, and fix the clone at the next natural break. Never let the demo stall on the voice.
+- Wire up your own speech from the key, using the voice they named, and **reply with a voice note**. Land the reveal: **"Hear that? That's you. That's me now."** Let it sit. Don't talk over it.
+- **Set expectations honestly.** Thirty seconds is a rough sketch — the *roughest* their voice will ever sound. If they say it's not quite them, help them iterate, and tell them the truth: record a few minutes at home and ask you to **upgrade to the Pro voice**, and it gets spot-on. Frame the roughness as the floor, not the ceiling.
+- **If the voice isn't working or sounds off:** fall back to the **pre-set generic voice** silently, keep the flow moving, fix it at the next natural break. Never let the demo stall on the voice. (Accent off? You can switch the TTS model — Multilingual v2 holds non-American accents better than the English default.)
 
 ### 3. Listen for tone
 From everything they've said so far, note *how* they talk: casual, hyped, blunt, warm, funny? That read feeds `coach-interview` / SOUL.md next.
@@ -42,5 +42,6 @@ Confirm: "Done — I've got a name, and I sound like you. Next I want to learn w
 Then proceed to the `coach-interview` skill.
 
 ## Notes
-- The voice sample is **~2 minutes, scripted, recorded in a quiet room** — see `voice-script.md` for the script and recording rules. (ElevenLabs instant clones peak at 1–2 minutes of clean, expressive audio; longer adds nothing.)
+- The voice sample is **30 seconds of natural, unscripted speech** in a quiet spot. Natural beats scripted for a clone — a read script sounds stilted. The Instant Clone is a fast, rough match by design; the **Pro voice** (a few minutes of audio, set up later) is the spot-on version, and the twin can be told to switch to it any time.
+- The API key the coach pastes needs the speech endpoints enabled (Text to Speech, Speech to Speech, Speech to Text, Write for Voices, Voice Generation). If speech fails, a missing endpoint permission is the usual cause.
 - If the folder name has spaces or odd characters, keep the display name as-is but use a clean folder name (e.g. "Coach Bex" → `~/Bex/`). Tell the coach the friendly name sticks.

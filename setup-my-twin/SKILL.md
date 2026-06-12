@@ -24,7 +24,7 @@ Run the chain **in this exact order**. Do not skip, do not reorder, do not batch
 
 By the time the coach says "set up my twin," the machine setup is done (the workshop's four moves, or the pre-work):
 - **Hermes is installed and the brain is on Nous Portal** — one login, flat subscription, **no `ANTHROPIC_API_KEY` in the environment.**
-- **Their voice is already cloned** — the 2-minute scripted recording (see `name-and-voice/voice-script.md`) was made and cloned at ElevenLabs on **Eleven Multilingual v2** (never English v2 — it flattens Australian accents), and the key is in the app.
+- **Their voice is set** — they made a 30-second Instant Voice Clone at ElevenLabs (no script) and handed the twin an API key in chat, so the twin already replies in their voice. (The Pro voice is the spot-on upgrade for later.)
 - **Telegram is connected**, so the twin is reachable from their phone.
 - **This kit is installed.**
 
@@ -33,7 +33,7 @@ By the time the coach says "set up my twin," the machine setup is done (the work
 Confirm the environment is ready. If any check fails, this is a **facilitator fix**, not something to surface to the coach — flag it quietly and pause the flow.
 
 - **Brain on Portal, as PROVIDER:** `hermes portal info` shows logged in AND "using Nous as inference provider". Signing into the app is authentication, not routing; the provider setting is the part that matters. `echo $ANTHROPIC_API_KEY` is empty; no metered keys anywhere. If anything is off, `hermes portal` in Terminal fixes auth, provider, and gateway in one command.
-- **Voice ready:** ElevenLabs key present, the coach's cloned voice selected, model set to **Multilingual v2**. A **fallback generic voice is pre-set** so a rough clone never stalls the flow.
+- **Voice ready:** the coach has handed over their ElevenLabs API key and the twin replies in their cloned voice. A **fallback generic voice is pre-set** so a rough clone never stalls the flow.
 - **Telegram connected and the messaging gateway running** (bottom status bar → Restart messaging if it sits quiet; it does not auto-start).
 - **Home is clean:** `~/` is writable; no half-built twin folder from a previous run.
 
@@ -105,7 +105,7 @@ This is the emotional beat of the whole setup — they hear the load out loud, t
 - `~/[TwinName]/` contains `SOUL.md`, `BUSINESS.md`, `OFFER.md`, `ICP.md` — all confirmed accurate by the coach in their own words.
 - Always-on memory seeded with the essentials (name + how they talk, business one-liner + revenue ballpark, offer + price, dream client in one line, the Never-without-asking rules) **plus The Download's open loops and #1 number.**
 - `Clients/` holds a starting state file for every client named.
-- The clone is live (Multilingual v2) and the twin is replying in the coach's voice.
+- The clone is live and the twin is replying in the coach's voice (Instant clone for now; Pro upgrade available later).
 - Telegram is connected and the coach has sent the twin one real instruction from their phone. **They've felt it work.** That moment is the testimonial — capture it.
 - The fuel gauge is set: mid-tier default, caching on, compression tuned, brain on the Portal, no metered keys.
 
